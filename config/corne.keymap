@@ -99,10 +99,10 @@
 
         paren {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans                &trans                 &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOLLAR  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans                &trans                 &trans         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DOLLAR  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &trans  &trans
+                        &trans  &trans  &trans    &trans      &trans                &trans
             >;
         };
     };
