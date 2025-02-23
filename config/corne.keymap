@@ -49,8 +49,8 @@
             bindings = <
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
 &kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 3 Z                 &lt 5 X            &lt 4 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp ESC
-                                                        &kp EQUAL             &kp BACKSPACE             &lt 6 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
+&copy_paste  &lt 2 Z                 &lt 4 X            &lt 3 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp ESC
+                                                        &kp EQUAL             &kp BACKSPACE             &lt 5 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
 
@@ -66,21 +66,6 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
 &kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
                                         &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
-            >;
-        };
-
-        raise_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
@@ -113,10 +98,10 @@
 
         paren {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans                &trans                 &trans         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DOLLAR  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &trans  &trans
-                        &trans  &trans  &trans    &trans      &trans                &trans
+&bt BT_CLR  &trans        &trans        &trans        &trans        &trans          &trans      &trans                &trans                 &trans         &trans  &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp DOLLAR  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans  &trans
+&trans      &trans        &trans        &trans        &trans        &trans          &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &trans  &trans
+                                        &trans        &trans        &trans          &trans      &trans                &trans
             >;
         };
     };
