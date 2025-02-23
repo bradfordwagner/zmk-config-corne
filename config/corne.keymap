@@ -49,23 +49,8 @@
             bindings = <
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
 &kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 2 Z                 &lt 4 X            &lt 3 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp ESC
-                                                        &kp EQUAL             &kp BACKSPACE             &lt 5 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
-            >;
-        };
-
-        lower_layer {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BSPC |
-            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
-            bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&copy_paste  &lt 1 Z                 &lt 3 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp ESC
+                                                        &kp EQUAL             &kp BACKSPACE             &lt 4 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
 
