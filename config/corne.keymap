@@ -24,6 +24,16 @@
             #binding-cells = <0>;
             bindings = <&kp LG(C)>, <&kp LG(V)>;
         };
+
+        home_row: home_row {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOME_ROW";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -37,10 +47,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB      &kp Q             &kp W        &kp E           &kp R               &kp T          &kp Y      &kp U                &kp I            &kp O        &kp P                      &kp EQUAL
-&kp ESC      &mt LEFT_SHIFT A  &mt LCTRL S  &mt LEFT_ALT D  &mt LEFT_COMMAND F  &kp G          &kp H      &mt RIGHT_COMMAND J  &mt RIGHT_ALT K  &mt RCTRL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 3 Z           &lt 5 X      &lt 4 C         &kp V               &kp B          &kp N      &kp M                &kp COMMA        &kp DOT      &kp FSLH                   &kp ESC
-                                            &kp EQUAL       &kp BACKSPACE       &lt 6 MINUS    &kp ENTER  &kp SPACE            &kp GRAVE
+&kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
+&kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
+&copy_paste  &lt 3 Z                 &lt 5 X            &lt 4 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp ESC
+                                                        &kp EQUAL             &kp BACKSPACE             &lt 6 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
 
