@@ -202,7 +202,7 @@
 &trans          &td_q  &kp W  &td_e   &td_r   &td_t     &trans  &trans  &trans  &trans  &trans  &trans
 &trans          &kp A  &kp S  &kp D   &td_f   &td_g     &trans  &trans  &trans  &trans  &trans  &trans
 &kp LEFT_SHIFT  &td_z  &td_x  &td_c   &td_v   &td_b     &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans  &trans    &trans  &trans  &trans
+                              &kp SPACE  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
