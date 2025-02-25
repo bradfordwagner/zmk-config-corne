@@ -141,6 +141,42 @@
 
             tapping-term-ms = <175>;
         };
+
+        td_1: td_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_1";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_1>, <&kp EXCLAM>;
+
+            tapping-term-ms = <175>;
+        };
+
+        td_2: td_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_2";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2>, <&kp AT>;
+
+            tapping-term-ms = <175>;
+        };
+
+        td_3: td_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_3";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_3>, <&kp HASH>;
+
+            tapping-term-ms = <175>;
+        };
+
+        td_4: td_4 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_4";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
+
+            tapping-term-ms = <175>;
+        };
     };
 
     keymap {
