@@ -156,7 +156,7 @@
             bindings = <
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
 &kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 1 Z                 &lt 3 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp ESC
+&copy_paste  &lt 1 Z                 &lt 3 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &to 5
                                                         &kp EQUAL             &kp BACKSPACE             &lt 4 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
@@ -199,10 +199,10 @@
 
         g1 {
             bindings = <
-&trans          &td_q  &kp W  &td_e      &td_r   &td_t        &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &kp A  &kp S  &kp D      &td_f   &td_g        &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &td_z  &td_x  &td_c      &td_v   &td_b        &trans  &trans  &trans  &trans  &trans  &trans
-                              &kp SPACE  &trans  &kp GRAVE    &trans  &trans  &trans
+&trans          &td_q  &kp W  &td_e  &td_r      &td_t        &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp A  &kp S  &kp D  &td_f      &td_g        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &td_z  &td_x  &td_c  &td_v      &td_b        &trans  &trans  &trans  &trans  &trans  &trans
+                              &to 0  &kp SPACE  &kp GRAVE    &trans  &trans  &trans
             >;
         };
     };
