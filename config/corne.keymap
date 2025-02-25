@@ -146,7 +146,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_1";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_1>, <&kp EXCLAM>;
+            bindings = <&kp NUMBER_1>, <&kp LC(NUMBER_1)>;
 
             tapping-term-ms = <175>;
         };
@@ -155,7 +155,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_2";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>, <&kp AT>;
+            bindings = <&kp NUMBER_2>, <&kp LC(NUMBER_2)>;
 
             tapping-term-ms = <175>;
         };
@@ -164,7 +164,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_3";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_3>, <&kp HASH>;
+            bindings = <&kp NUMBER_3>, <&kp LC(NUMBER_3)>;
 
             tapping-term-ms = <175>;
         };
@@ -173,7 +173,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_4";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_4>, <&kp DOLLAR>;
+            bindings = <&kp NUMBER_4>, <&kp LC(NUMBER_4)>;
 
             tapping-term-ms = <175>;
         };
@@ -246,7 +246,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &td_1   &td_2   &td_3   &td_4   &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
