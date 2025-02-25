@@ -106,6 +106,15 @@
             tapping-term-ms = <175>;
         };
 
+        td_b: td_b {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_B";
+            #binding-cells = <0>;
+            bindings = <&kp B>, <&kp LC(B)>;
+
+            tapping-term-ms = <175>;
+        };
+
         td_v: td_v {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_V";
