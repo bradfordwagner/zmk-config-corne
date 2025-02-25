@@ -48,6 +48,7 @@
             label = "TD_Q";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp LC(Q)>;
+
             tapping-term-ms = <175>;
         };
 
@@ -56,6 +57,7 @@
             label = "TD_E";
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp LC(E)>;
+
             tapping-term-ms = <175>;
         };
 
@@ -64,6 +66,7 @@
             label = "TD_R";
             #binding-cells = <0>;
             bindings = <&kp R>, <&kp LC(R)>;
+
             tapping-term-ms = <175>;
         };
 
@@ -72,14 +75,16 @@
             label = "TD_T";
             #binding-cells = <0>;
             bindings = <&kp T>, <&kp LC(T)>;
+
             tapping-term-ms = <175>;
         };
-        
+
         td_z: td_z {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_Z";
             #binding-cells = <0>;
             bindings = <&kp Z>, <&kp LC(Z)>;
+
             tapping-term-ms = <175>;
         };
 
@@ -88,6 +93,7 @@
             label = "TD_X";
             #binding-cells = <0>;
             bindings = <&kp X>, <&kp LC(X)>;
+
             tapping-term-ms = <175>;
         };
 
@@ -96,6 +102,7 @@
             label = "TD_C";
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LC(C)>;
+
             tapping-term-ms = <175>;
         };
 
@@ -104,20 +111,25 @@
             label = "TD_V";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LC(V)>;
+
             tapping-term-ms = <175>;
         };
+
         td_f: td_f {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_F";
             #binding-cells = <0>;
             bindings = <&kp F>, <&kp LC(F)>;
+
             tapping-term-ms = <175>;
         };
+
         td_g: td_g {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_G";
             #binding-cells = <0>;
             bindings = <&kp G>, <&kp LC(G)>;
+
             tapping-term-ms = <175>;
         };
     };
@@ -178,10 +190,10 @@
 
         g1 {
             bindings = <
-&trans          &trans  &kp W   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &kp A   &kp S   &kp D   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans    &trans  &trans  &trans
+&trans          &td_q  &kp W  &td_e   &td_r   &td_t     &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp A  &kp S  &kp D   &td_f   &td_g     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &td_z  &td_x  &td_c   &td_v   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
