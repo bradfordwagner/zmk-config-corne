@@ -19,13 +19,6 @@
 
 / {
     behaviors {
-        tap_dance: tap_dance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE";
-            #binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
-        };
-
         copy_paste: copy_paste {
             compatible = "zmk,behavior-tap-dance";
             label = "COPY_PASTE";
@@ -48,6 +41,13 @@
             label = "DOT_COMMA";
             #binding-cells = <0>;
             bindings = <&kp PERIOD>, <&kp COMMA>;
+        };
+
+        td_q: td_q {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_Q";
+            #binding-cells = <0>;
+            bindings = <&kp Q>, <&kp LC(Q)>;
         };
     };
 
@@ -102,6 +102,15 @@
 &trans  &trans        &trans        &trans        &trans        &trans          &kp DOLLAR  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans  &bt BT_CLR
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &trans  &trans
                                     &trans        &trans        &trans          &trans      &trans                &trans
+            >;
+        };
+
+        g1 {
+            bindings = <
+&trans          &trans  &kp W   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &kp A   &kp S   &kp D   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
