@@ -48,6 +48,7 @@
             label = "TD_Q";
             #binding-cells = <0>;
             bindings = <&kp Q>, <&kp LC(Q)>;
+            tapping-term-ms = <175>;
         };
     };
 
