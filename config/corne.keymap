@@ -19,6 +19,13 @@
 
 / {
     behaviors {
+        tap_dance: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp>, <&kp>;
+        };
+
         copy_paste: copy_paste {
             compatible = "zmk,behavior-tap-dance";
             label = "COPY_PASTE";
