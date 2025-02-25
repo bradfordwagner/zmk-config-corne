@@ -50,6 +50,76 @@
             bindings = <&kp Q>, <&kp LC(Q)>;
             tapping-term-ms = <175>;
         };
+
+        td_e: td_e {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_E";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp LC(E)>;
+            tapping-term-ms = <175>;
+        };
+
+        td_r: td_r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_R";
+            #binding-cells = <0>;
+            bindings = <&kp R>, <&kp LC(R)>;
+            tapping-term-ms = <175>;
+        };
+
+        td_t: td_t {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_T";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&kp LC(T)>;
+            tapping-term-ms = <175>;
+        };
+        
+        td_z: td_z {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_Z";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&kp LC(Z)>;
+            tapping-term-ms = <175>;
+        };
+
+        td_x: td_x {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_X";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&kp LC(X)>;
+            tapping-term-ms = <175>;
+        };
+
+        td_c: td_c {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_C";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&kp LC(C)>;
+            tapping-term-ms = <175>;
+        };
+
+        td_v: td_v {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_V";
+            #binding-cells = <0>;
+            bindings = <&kp V>, <&kp LC(V)>;
+            tapping-term-ms = <175>;
+        };
+        td_f: td_f {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_F";
+            #binding-cells = <0>;
+            bindings = <&kp F>, <&kp LC(F)>;
+            tapping-term-ms = <175>;
+        };
+        td_g: td_g {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_G";
+            #binding-cells = <0>;
+            bindings = <&kp G>, <&kp LC(G)>;
+            tapping-term-ms = <175>;
+        };
     };
 
     keymap {
