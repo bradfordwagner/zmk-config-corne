@@ -187,6 +187,12 @@
             key-positions = <13 14 15>;
             layers = <0>;
         };
+
+        to_home {
+            bindings = <&to 0>;
+            key-positions = <13 14 15>;
+            layers = <3>;
+        };
     };
 
     keymap {
