@@ -179,6 +179,15 @@
         };
     };
 
+    macros {
+        to_mouse: to_mouse {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 3 &kp A &kp S &kp D>;
+            label = "TO_MOUSE";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
