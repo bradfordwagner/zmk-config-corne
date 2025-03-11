@@ -180,7 +180,7 @@
 
         to_mouse {
             bindings = <&to 3>;
-            key-positions = <13 14 15>;
+            key-positions = <25 26 27>;
             layers = <0 7>;
         };
 
@@ -192,7 +192,7 @@
 
         to_ploopy {
             bindings = <&to 7>;
-            key-positions = <13 14>;
+            key-positions = <13 14 15>;
             layers = <0 3>;
         };
     };
