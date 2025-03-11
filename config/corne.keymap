@@ -193,7 +193,7 @@
         };
 
         to_ploopy {
-            bindings = <&none>;
+            bindings = <&to 7>;
             key-positions = <13 14>;
             layers = <0>;
         };
