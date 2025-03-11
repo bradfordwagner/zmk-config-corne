@@ -277,10 +277,10 @@
 
         ploopy {
             bindings = <
-&trans  &trans  &trans  &trans      &trans        &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans        &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans        &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                        &mkp MCLK   &mkp LCLK     &mkp RCLK    &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans                 &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans                 &trans       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &kt LS(LC(LA(LG(V))))  &trans       &trans  &trans  &trans  &trans  &trans  &trans
+                        &mkp MCLK  &mkp LCLK              &mkp RCLK    &trans  &trans  &trans
             >;
         };
     };
