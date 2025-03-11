@@ -189,7 +189,13 @@
         to_home {
             bindings = <&to 0>;
             key-positions = <13 14 15>;
-            layers = <3>;
+            layers = <3 7>;
+        };
+
+        to_ploopy {
+            bindings = <&none>;
+            key-positions = <13 14>;
+            layers = <0>;
         };
     };
 
