@@ -197,6 +197,12 @@
             key-positions = <13 14>;
             layers = <0>;
         };
+
+        to_home_from_ploopy {
+            bindings = <&to 0>;
+            key-positions = <13 14>;
+            layers = <3 7>;
+        };
     };
 
     keymap {
