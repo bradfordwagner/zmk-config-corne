@@ -14,7 +14,12 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <interfaces/hid-trackball.dtsi>
 
-// override mouse movement speed
+&hid_trackball_interface {
+    automouse-layer = <7>;
+    automouse-layer-timeout-ms = <600>;
+    scroll-layers = <>;
+    snipe-layers = <>;
+};
 
 / {
     behaviors {
