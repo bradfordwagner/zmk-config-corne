@@ -273,7 +273,7 @@
             bindings = <
 &kp LG(LS(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
 &trans                &trans           &trans          &trans                    &trans                     &kt LS(LA(LC(LG(V))))    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LG(R)             &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_UP               &kp LG(W)                &trans  &trans  &trans  &trans  &trans  &trans
+&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_UP               &kp LG(W)                &trans  &trans  &trans  &trans  &trans  &trans
                                                        &mkp MCLK                 &mkp LCLK                  &mkp RCLK                &trans  &trans  &trans
             >;
         };
