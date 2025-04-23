@@ -195,6 +195,21 @@
             key-positions = <13 14 15>;
             layers = <0 3>;
         };
+
+        tab_prev {
+            bindings = <&kp LS(LG(LEFT_BRACKET))>;
+            key-positions = <13 14>;
+        };
+
+        tab_next {
+            bindings = <&kp LS(LG(RIGHT_BRACKET))>;
+            key-positions = <16 15>;
+        };
+
+        tab_refresh {
+            bindings = <&kp LG(R)>;
+            key-positions = <14 15>;
+        };
     };
 
     keymap {
