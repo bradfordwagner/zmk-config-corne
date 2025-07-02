@@ -181,17 +181,17 @@
         to_mouse {
             bindings = <&to 3>;
             key-positions = <25 26 27>;
-            layers = <0 7>;
+            layers = <0 5>;
         };
 
         to_home {
             bindings = <&to 0>;
             key-positions = <13 14 15 16>;
-            layers = <7 3 0>;
+            layers = <5 3 0>;
         };
 
         to_ploopy {
-            bindings = <&to 7>;
+            bindings = <&to 5>;
             key-positions = <13 14 15>;
             layers = <0 3>;
         };
@@ -199,19 +199,19 @@
         tab_prev {
             bindings = <&kp LS(LG(LEFT_BRACKET))>;
             key-positions = <13 14>;
-            layers = <7>;
+            layers = <5>;
         };
 
         tab_next {
             bindings = <&kp LS(LG(RIGHT_BRACKET))>;
             key-positions = <16 15>;
-            layers = <7>;
+            layers = <5>;
         };
 
         tab_refresh {
             bindings = <&kp LG(R)>;
             key-positions = <14 15>;
-            layers = <7>;
+            layers = <5>;
         };
     };
 
@@ -228,7 +228,7 @@
             bindings = <
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
 &kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 1 Z                 &lt 3 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &to 5
+&copy_paste  &lt 1 Z                 &lt 3 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &none
                                                         &kp EQUAL             &kp BACKSPACE             &lt 4 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
@@ -266,24 +266,6 @@
 &trans  &trans        &trans        &trans        &trans        &trans          &kp DOLLAR                 &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans  &bt BT_CLR
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp DOLLAR                 &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &trans  &trans
                                     &trans        &trans        &trans          &kp LS(LG(RIGHT_BRACKET))  &kp C_PP              &trans
-            >;
-        };
-
-        g1 {
-            bindings = <
-&trans          &td_q  &kp W  &td_e  &td_r      &td_t          &trans  &trans  &trans  &trans  &trans  &trans
-&mt LCTRL ESC   &kp A  &kp S  &kp D  &td_f      &td_g          &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &td_z  &td_x  &td_c  &td_v      &td_b          &trans  &trans  &trans  &trans  &trans  &trans
-                              &to 0  &kp SPACE  &lt 6 GRAVE    &trans  &trans  &trans
-            >;
-        };
-
-        g2 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &td_1   &td_2   &td_3   &td_4   &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
