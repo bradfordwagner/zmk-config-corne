@@ -253,10 +253,10 @@
 
         mouse {
             bindings = <
-&trans  &trans           &trans          &trans           &trans          &trans       &trans          &trans            &trans          &trans           &trans  &trans
-&trans  &trans           &trans          &msc SCRL_RIGHT  &msc SCRL_LEFT  &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
-&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP    &trans       &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT       &trans  &trans
-                                         &mkp MCLK        &mkp LCLK       &mkp RCLK    &trans          &mkp LCLK         &mkp RCLK
+&trans  &trans           &trans          &trans          &trans        &trans       &trans          &trans            &trans          &trans           &trans  &trans
+&trans  &trans           &trans          &trans          &trans        &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
+&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &trans       &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT       &trans  &trans
+                                         &mkp MCLK       &mkp LCLK     &mkp RCLK    &trans          &mkp LCLK         &mkp RCLK
             >;
         };
 
