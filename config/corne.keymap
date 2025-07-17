@@ -281,7 +281,7 @@
         mouse2 {
             bindings = <
 &trans  &trans           &trans          &to 5           &to 7         &trans       &trans              &trans             &trans              &trans             &trans  &trans
-&trans  &trans           &trans          &trans          &trans        &kp ENTER    &mmv MOVE_X(-1500)  &mmv MOVE_Y(1500)  &mmv MOVE_Y(-1500)  &mmv MOVE_X(1500)  &trans  &trans
+&trans  &trans           &trans          &trans          &trans        &kp ENTER    &mmv MOVE_X(-1800)  &mmv MOVE_Y(1800)  &mmv MOVE_Y(-1800)  &mmv MOVE_X(1800)  &trans  &trans
 &trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(W)    &trans              &kp C_PLAY_PAUSE   &kp C_PREVIOUS      &kp C_NEXT         &trans  &trans
                                          &trans          &mkp LCLK     &mkp RCLK    &trans              &mkp LCLK          &mkp RCLK
             >;
