@@ -281,7 +281,7 @@
         mouse2 {
             bindings = <
 &trans  &trans  &trans  &to 5   &to 7   &trans    &trans              &trans             &trans            &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(-1000)  &mv MOVE_Y(-1000)  &mv MOVE_Y(1000)  &mv MOVE_X(1000)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mmv MOVE_X(-800)  &mv MOVE_Y(-800)  &mv MOVE_Y(800)  &mv MOVE_X(800)  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans              &trans             &trans            &trans            &trans  &trans
                         &trans  &trans  &trans    &trans              &trans             &trans
             >;
