@@ -5,7 +5,7 @@
  */
 // override mouse movement speed
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3200  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 30    // default: 10
 
 #include <behaviors.dtsi>
@@ -179,19 +179,19 @@
         compatible = "zmk,combos";
 
         to_mouse {
-            bindings = <&to 3>;
-            key-positions = <25 26 27>;
-            layers = <0 5>;
+            bindings = <&to 5>;
+            key-positions = <14 15 16>;
+            layers = <0 3 6 7>;
         };
 
         to_home {
             bindings = <&to 0>;
             key-positions = <13 14 15 16>;
-            layers = <5 3 0>;
+            layers = <5 3 0 6 7>;
         };
 
         to_ploopy {
-            bindings = <&to 5>;
+            bindings = <&to 3>;
             key-positions = <13 14 15>;
             layers = <0 3>;
         };
@@ -199,19 +199,19 @@
         tab_prev {
             bindings = <&kp LS(LG(LEFT_BRACKET))>;
             key-positions = <13 14>;
-            layers = <5>;
+            layers = <5 6 7>;
         };
 
         tab_next {
             bindings = <&kp LS(LG(RIGHT_BRACKET))>;
             key-positions = <16 15>;
-            layers = <5>;
+            layers = <3 5 6 7>;
         };
 
         tab_refresh {
             bindings = <&kp LG(R)>;
             key-positions = <14 15>;
-            layers = <5>;
+            layers = <3 5 6 7>;
         };
     };
 
@@ -228,7 +228,7 @@
             bindings = <
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
 &kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 1 Z                 &lt 3 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &none
+&copy_paste  &lt 1 Z                 &lt 5 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &none
                                                         &kp EQUAL             &kp BACKSPACE             &lt 4 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
@@ -251,12 +251,12 @@
             >;
         };
 
-        mouse {
+        ploopy {
             bindings = <
-&trans  &trans           &trans          &trans          &trans        &trans       &trans          &trans            &trans          &trans           &trans  &trans
-&trans  &trans           &trans          &trans          &trans        &trans       &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
-&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &trans       &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT       &trans  &trans
-                                         &mkp MCLK       &mkp LCLK     &mkp RCLK    &trans          &mkp LCLK         &mkp RCLK
+&kp LG(LS(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(R)    &trans  &trans  &trans  &trans  &trans  &trans
+&trans                &trans           &trans          &trans                    &trans                     &kt ENTER    &trans  &trans  &trans  &trans  &trans  &trans
+&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_UP               &kp LG(W)    &trans  &trans  &trans  &trans  &trans  &trans
+                                                       &mkp MCLK                 &mkp LCLK                  &mkp RCLK    &trans  &trans  &trans
             >;
         };
 
@@ -269,12 +269,30 @@
             >;
         };
 
-        ploopy {
+        mouse {
             bindings = <
-&kp LG(LS(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(R)    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                &trans           &trans          &trans                    &trans                     &kt ENTER    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_UP               &kp LG(W)    &trans  &trans  &trans  &trans  &trans  &trans
-                                                       &mkp MCLK                 &mkp LCLK                  &mkp RCLK    &trans  &trans  &trans
+&kp LS(LG(NUMBER_4))  &trans           &trans          &trans          &to 6         &trans       &trans          &trans            &trans          &trans           &trans  &trans
+&trans                &trans           &trans          &trans          &trans        &kp ENTER    &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
+&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(W)    &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT       &trans  &trans
+                                                       &mkp MCLK       &mkp LCLK     &mkp RCLK    &trans          &mkp LCLK         &mkp RCLK
+            >;
+        };
+
+        mouse2 {
+            bindings = <
+&trans  &trans           &trans          &to 5           &to 7         &trans       &trans              &trans             &trans              &trans             &trans  &trans
+&trans  &trans           &trans          &trans          &trans        &kp ENTER    &mmv MOVE_X(-1800)  &mmv MOVE_Y(1800)  &mmv MOVE_Y(-1800)  &mmv MOVE_X(1800)  &trans  &trans
+&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(W)    &trans              &kp C_PLAY_PAUSE   &kp C_PREVIOUS      &kp C_NEXT         &trans  &trans
+                                         &trans          &mkp LCLK     &mkp RCLK    &trans              &mkp LCLK          &mkp RCLK
+            >;
+        };
+
+        mouse3 {
+            bindings = <
+&trans  &trans           &trans          &to 6           &trans        &trans       &trans             &trans            &trans             &trans            &trans  &trans
+&trans  &trans           &trans          &trans          &trans        &kp ENTER    &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_X(1200)  &trans  &trans
+&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(W)    &trans             &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT        &trans  &trans
+                                         &trans          &mkp LCLK     &mkp RCLK    &trans             &mkp LCLK         &mkp RCLK
             >;
         };
     };
