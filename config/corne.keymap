@@ -179,7 +179,7 @@
         compatible = "zmk,combos";
 
         to_mouse {
-            bindings = <&to 3>;
+            bindings = <&to 5>;
             key-positions = <25 26 27>;
             layers = <0 3>;
         };
