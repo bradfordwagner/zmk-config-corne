@@ -193,7 +193,7 @@
         to_ploopy {
             bindings = <&to 3>;
             key-positions = <13 14 15>;
-            layers = <0 3>;
+            layers = <0 3 5 6 7>;
         };
 
         tab_prev {
@@ -289,10 +289,10 @@
 
         mouse3 {
             bindings = <
-&trans  &trans           &trans          &to 6           &trans        &trans       &trans             &trans            &trans             &trans            &trans  &trans
+&trans  &trans           &trans          &to 6           &trans        &trans       &trans              &trans             &trans              &trans             &trans  &trans
 &trans  &trans           &trans          &trans          &trans        &kp ENTER    &mmv MOVE_X(-1200)  &mmv MOVE_Y(1200)  &mmv MOVE_Y(-1200)  &mmv MOVE_X(1200)  &trans  &trans
-&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(W)    &trans             &kp C_PLAY_PAUSE  &kp C_PREVIOUS     &kp C_NEXT        &trans  &trans
-                                         &trans          &mkp LCLK     &mkp RCLK    &trans             &mkp LCLK         &mkp RCLK
+&trans  &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &kp LG(W)    &trans              &kp C_PLAY_PAUSE   &kp C_PREVIOUS      &kp C_NEXT         &trans  &trans
+                                         &trans          &mkp LCLK     &mkp RCLK    &trans              &mkp LCLK          &mkp RCLK
             >;
         };
     };
