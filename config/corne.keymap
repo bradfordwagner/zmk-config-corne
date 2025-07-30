@@ -199,7 +199,7 @@
         tab_prev {
             bindings = <&kp LS(LG(LEFT_BRACKET))>;
             key-positions = <13 14>;
-            layers = <5 6 7>;
+            layers = <5 6 7 3>;
         };
 
         tab_next {
