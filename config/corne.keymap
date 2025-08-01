@@ -180,7 +180,7 @@
 
         to_mouse {
             bindings = <&to 5>;
-            key-positions = <19 20>;
+            key-positions = <19 39>;
             layers = <0 3 6 7>;
         };
 
