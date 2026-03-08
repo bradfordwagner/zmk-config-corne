@@ -213,6 +213,36 @@
             key-positions = <14 13 38>;
             layers = <3 5 6 7>;
         };
+
+        equal {
+            bindings = <&kp EQUAL>;
+            key-positions = <31 32>;
+            layers = <0>;
+        };
+
+        backtick-r {
+            bindings = <&kp GRAVE>;
+            key-positions = <32 33>;
+            layers = <0>;
+        };
+
+        cmd {
+            bindings = <&kp LEFT_COMMAND>;
+            key-positions = <26 27>;
+            layers = <0>;
+        };
+
+        continuous {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <28 27>;
+            layers = <0>;
+        };
+
+        g-grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <16 25>;
+            layers = <3>;
+        };
     };
 
     keymap {
@@ -229,7 +259,7 @@
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
 &kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
 &copy_paste  &lt 1 Z                 &lt 5 X            &lt 2 C               &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp RIGHT_COMMAND
-                                                        &kp EQUAL             &kp BACKSPACE             &lt 4 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
+                                                        &to 3                 &kp BACKSPACE             &lt 4 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
 
@@ -248,6 +278,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                         &trans  &trans  &dot_comma    &trans  &trans        &kp N0
+            >;
+        };
+
+        g1 {
+            bindings = <
+&kp TAB     &td_q  &kp W  &td_e  &td_r      &td_t                   &trans  &trans  &trans  &trans  &trans  &kp LA(ESCAPE)
+&kp ESCAPE  &kp A  &kp S  &kp D  &td_f      &td_g                   &trans  &trans  &trans  &trans  &trans  &trans
+&lt 4 F1    &td_z  &td_x  &td_c  &td_v      &td_b                   &trans  &trans  &trans  &trans  &trans  &trans
+                          &to 0  &kp SPACE  &mt LSHIFT BACKSPACE    &trans  &trans  &trans
+            >;
+        };
+
+        g2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &td_1   &td_2   &td_3   &td_4   &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
