@@ -179,7 +179,7 @@
         compatible = "zmk,combos";
 
         to_mouse {
-            bindings = <&to 5>;
+            bindings = <&to 7>;
             key-positions = <17 38>;
             layers = <0 3 6 7>;
         };
@@ -191,7 +191,7 @@
         };
 
         to_ploopy {
-            bindings = <&to 3>;
+            bindings = <&to 5>;
             key-positions = <15 38>;
             layers = <0 3 5 6 7>;
         };
