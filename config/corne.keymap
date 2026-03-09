@@ -181,19 +181,19 @@
         to_mouse {
             bindings = <&to 7>;
             key-positions = <38 17>;
-            layers = <0 3 6 7>;
+            layers = <0 6 7>;
         };
 
         to_home {
             bindings = <&to 0>;
             key-positions = <16 38>;
-            layers = <5 3 0 6 7>;
+            layers = <5 0 6 7>;
         };
 
         to_ploopy {
             bindings = <&to 5>;
             key-positions = <15 38>;
-            layers = <0 3 5 6 7>;
+            layers = <0 5 6 7>;
         };
 
         tab_prev {
@@ -240,7 +240,7 @@
 
         g-grave {
             bindings = <&kp GRAVE>;
-            key-positions = <12 38>;
+            key-positions = <38 16>;
             layers = <3>;
         };
     };
