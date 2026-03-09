@@ -240,7 +240,7 @@
 
         g-grave {
             bindings = <&kp GRAVE>;
-            key-positions = <38 16>;
+            key-positions = <16 37>;
             layers = <3>;
         };
     };
