@@ -180,7 +180,7 @@
 
         to_mouse {
             bindings = <&to 7>;
-            key-positions = <38 15>;
+            key-positions = <38 17>;
             layers = <0 6 7>;
         };
 
@@ -192,7 +192,7 @@
 
         to_ploopy {
             bindings = <&to 5>;
-            key-positions = <38 17>;
+            key-positions = <38 15>;
             layers = <0 5 6 7>;
         };
 
@@ -301,10 +301,10 @@
 
         ploopy {
             bindings = <
-&kp LG(LS(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(R)    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                &trans           &trans          &trans                    &trans                     &kt ENTER    &trans  &trans  &trans  &trans  &trans  &trans
-&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_UP               &kp LG(W)    &trans  &trans  &trans  &trans  &trans  &trans
-                                                       &mkp MCLK                 &mkp LCLK                  &mkp RCLK    &trans  &trans  &trans
+&kp LG(LS(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LS(LG(LEFT_BRACKET))  &kp LS(LG(RIGHT_BRACKET))  &kp LG(R)    &trans          &trans          &trans        &trans           &trans  &trans
+&trans                &trans           &trans          &trans                    &trans                     &kt ENTER    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN            &msc SCRL_UP               &kp LG(W)    &trans          &trans          &trans        &trans           &trans  &trans
+                                                       &mkp MCLK                 &mkp LCLK                  &mkp RCLK    &trans          &trans          &trans
             >;
         };
 
