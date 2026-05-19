@@ -28,8 +28,14 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <175>;
+            // balanced: more reliable than tap-preferred for intentional mod+key combos once require-prior-idle-ms is set
+            flavor = "balanced";
+            // 200ms: slightly more time to resolve tap vs hold without feeling sluggish
+            tapping-term-ms = <200>;
+            // allows key repeat (tap then hold) instead of triggering the modifier
+            quick-tap-ms = <175>;
+            // prevents misfires on fast same-hand rolls (e.g. "as" accidentally triggering Ctrl)
+            require-prior-idle-ms = <150>;
         };
 
         dot_comma: dot_comma {
