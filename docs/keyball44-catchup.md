@@ -70,7 +70,84 @@ thumb cluster with two `&none`, putting the same logical thumbs at 38–43.
 - The `#include <behaviors/mouse_keys.dtsi>` (not needed on corne's ZMK pin;
   corne resolves `mkp`/`mmv`/`msc` via `behaviors.dtsi` + `pointing.h`).
 - keyball's BLE trackball-lag tuning in `*.conf`.
-- `corne.conf`, `build.yaml`, and `west.yml` were left untouched.
+- `corne.conf`, `build.yaml`, and `west.yml` were left untouched in round 1 —
+  the first two are addressed in round 2 below.
+
+## Round 2 — plumbing catch-up + Windows port finished
+
+The first round ported the keymap; this round closed the build/config gaps and
+finished a half-done modifier port.
+
+### Windows modifiers (now complete, and a deliberate divergence from keyball)
+
+Round 1 changed only `copy_paste` and the pointer-layer tab keys to `LC`, leaving
+the rest Mac. keyball has since **reverted to Mac** (`f24b99f`), so corne is now
+the only Windows config and modifiers are an expected permanent diff.
+
+| binding | was (Mac) | now (Windows) |
+|---|---|---|
+| home-row index | `LEFT_COMMAND F` / `RIGHT_COMMAND J` | `LEFT_CONTROL` / `RIGHT_CONTROL` |
+| home-row ring | `LCTRL S` / `RCTRL L` | `LEFT_GUI` / `RIGHT_GUI` |
+| bottom-right pinky | `&kp RIGHT_COMMAND` | `&kp RIGHT_CONTROL` |
+| `cmd` combo | `LEFT_COMMAND` | `LEFT_CONTROL` (node still named `cmd`) |
+| `tab_prev` / `tab_next` combos | `LS(LG([))` / `LS(LG(]))` | `LC(LS(TAB))` / `LC(TAB)` |
+| `tab_refresh` combo, pointer refresh | `LG(R)` | `LC(R)` |
+| pointer close-tab | `LG(W)` | `LC(W)` |
+| pointer screenshot | `LS(LG(N4))` | `LG(LS(S))` (Win+Shift+S — `LG` is correct here) |
+| paren next-tab | `LS(LG(]))` | `LC(TAB)` |
+
+GUI/Ctrl were **swapped** rather than both mapped to Ctrl, so the index finger
+still carries the primary shortcut modifier the way Cmd did.
+
+### build.yaml
+
+- Added the `settings_reset` build. `flash.md` used to document its absence as a
+  hole; that note is gone.
+- Added a ZMK Studio build. keyball sets `CONFIG_ZMK_STUDIO=y` in its own
+  `keyball44_right.conf`; corne uses the **upstream** shield with no `.conf` of
+  ours, so it goes through `cmake-args` instead. It is on **`corne_left`**
+  because Studio must run on the central half — keyball's is on the right only
+  because the trackball makes the right half central there.
+
+### corne.conf
+
+Ported the portable settings; skipped the trackball-motivated BLE tuning.
+
+- `CONFIG_ZMK_DISPLAY=y` — `build.yaml` was already building `nice_view` with the
+  display disabled, so the screen was dead weight.
+- `CONFIG_ZMK_IDLE_TIMEOUT=900000` with sleep at `905000`, matching keyball's
+  5-second blank-then-sleep gap.
+- `CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING` / `_PROXY`.
+- `CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=512` — the default 64 can drop events in this
+  tap-dance-heavy keymap.
+
+Deliberately **not** ported:
+
+- `CONFIG_BT_PERIPHERAL_PREF_*` (7.5ms interval, `LATENCY=0`), the `BT_BUF_*` /
+  `L2CAP_TX_BUF_COUNT` bumps. These exist to kill trackball lag; corne has no
+  trackball and they cost battery.
+- `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y` — unverified whether this Kconfig still
+  exists under corne's ZMK `v0.3.0`. An unknown symbol in a `.conf` is silently
+  ignored, so it would look applied while doing nothing. Confirm against the
+  pinned ZMK tree before adding.
+- `CONFIG_ZMK_EXT_POWER=y` — not needed for nice_view's SPI epaper.
+
+### .gitignore
+
+Added, with keyball's un-ignore block. The global `~/.gitignore` ignores
+`.claude`, so without this any new project command file silently fails to stage
+(`flash.md` only got in via `git add -f`).
+
+### flash.md
+
+Ported keyball's macOS permission/retry hardening (`2a70ebf`) so the file stays a
+near-1:1 port even though corne flashes over WSL. Also taught the LEFT glob to
+exclude the new `corne_left_with_studio` artifact.
+
+### Do not sync west.yml / build.yml
+
+corne is **ahead**: ZMK `v0.3.0` vs keyball's `v0.2`. Sync runs the other way for
+these two files.
 
 ## Known caveat — SNIPE is click-only on corne
 

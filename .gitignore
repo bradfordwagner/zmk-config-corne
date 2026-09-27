@@ -1,0 +1,4 @@
+# allow project skills to be versioned despite global .claude ignore
+!.claude/
+!.claude/commands/
+!.claude/commands/**
