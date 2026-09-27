@@ -23,3 +23,16 @@ include:
     shield: corne_left nice_view_adapter nice_view
   - board: nice_nano_v2
     shield: corne_right nice_view_adapter nice_view
+
+  # Studio goes on the central half (left, for the stock corne shield). The
+  # upstream shield has no .conf of our own to set CONFIG_ZMK_STUDIO in, so it
+  # is passed as a cmake arg here instead.
+  - board: nice_nano_v2
+    shield: corne_left nice_view_adapter nice_view
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
+    artifact-name: corne_left_with_studio
+
+  # Flash to wipe BLE pairing / settings.
+  - board: nice_nano_v2
+    shield: settings_reset
