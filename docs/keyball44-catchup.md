@@ -113,10 +113,6 @@ still carries the primary shortcut modifier the way Cmd did.
 
 Ported the portable settings; skipped the trackball-motivated BLE tuning.
 
-- `CONFIG_ZMK_DISPLAY=y` — `build.yaml` was already building `nice_view` with the
-  display disabled, so the screen was dead weight.
-- `CONFIG_ZMK_IDLE_TIMEOUT=900000` with sleep at `905000`, matching keyball's
-  5-second blank-then-sleep gap.
 - `CONFIG_ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING` / `_PROXY`.
 - `CONFIG_ZMK_BEHAVIORS_QUEUE_SIZE=512` — the default 64 can drop events in this
   tap-dance-heavy keymap.
@@ -126,11 +122,31 @@ Deliberately **not** ported:
 - `CONFIG_BT_PERIPHERAL_PREF_*` (7.5ms interval, `LATENCY=0`), the `BT_BUF_*` /
   `L2CAP_TX_BUF_COUNT` bumps. These exist to kill trackball lag; corne has no
   trackball and they cost battery.
-- `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y` — unverified whether this Kconfig still
-  exists under corne's ZMK `v0.3.0`. An unknown symbol in a `.conf` is silently
-  ignored, so it would look applied while doing nothing. Confirm against the
-  pinned ZMK tree before adding.
 - `CONFIG_ZMK_EXT_POWER=y` — not needed for nice_view's SPI epaper.
+- `CONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y` — verified to still exist in v0.3.0
+  (`app/Kconfig`), so it is safe to add; simply not adopted. Note the general
+  hazard it was first flagged for is real: an undefined `CONFIG_` in a `.conf`
+  is silently ignored, so it reads as applied while doing nothing.
+
+### Two settings tried and backed out — read before re-adding
+
+Both were ported from keyball on reasoning the CI build then disproved.
+
+**`CONFIG_ZMK_DISPLAY=y` is redundant.** The upstream `nice_view` shield ships
+`app/boards/shields/nice_view/nice_view.conf`, which already sets it *and*
+`CONFIG_ZMK_DISPLAY_BLANK_ON_IDLE=n`. The screen was never dead weight: the
+pre-change build at `cda18b1` already compiled LVGL, the `ls0xx` driver and
+`widgets/status.c`, and adding the line moved flash by only ~1.7 KB. Do not
+restate it here — the shield owns it.
+
+**`CONFIG_ZMK_IDLE_TIMEOUT=900000` is a battery regression.** It does not gate
+screen blanking on this board (the shield disabled blanking), and the idle state
+is not display-only: `app/src/activity.c` → `ZMK_ACTIVITY_IDLE` makes
+`display/main.c` call `stop_display_updates()` and `battery.c` stop the battery
+poll timer. Raising the timeout from its 30s default to 15m therefore keeps
+display refresh and battery polling alive for fifteen minutes of idleness.
+corne keeps the default and only sets `IDLE_SLEEP_TIMEOUT=900000`. keyball44
+carries the raised value; that is keyball's call, not a gap here.
 
 ### .gitignore
 
