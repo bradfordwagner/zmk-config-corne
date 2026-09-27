@@ -262,19 +262,19 @@
         };
 
         tab_prev {
-            bindings = <&kp LS(LG(LEFT_BRACKET))>;
+            bindings = <&kp LC(LS(TAB))>;
             key-positions = <13 38>;
             layers = <5 7 4 3>;
         };
 
         tab_next {
-            bindings = <&kp LS(LG(RIGHT_BRACKET))>;
+            bindings = <&kp LC(TAB)>;
             key-positions = <14 38>;
             layers = <3 5 7 4>;
         };
 
         tab_refresh {
-            bindings = <&kp LG(R)>;
+            bindings = <&kp LC(R)>;
             key-positions = <14 13 38>;
             layers = <3 5 7 4>;
         };
@@ -292,7 +292,7 @@
         };
 
         cmd {
-            bindings = <&kp LEFT_COMMAND>;
+            bindings = <&kp LEFT_CONTROL>;
             key-positions = <26 27>;
             layers = <0 4 6>;
         };
@@ -317,8 +317,8 @@
             label = "DEFAULT";
             bindings = <
 &kp TAB      &kp Q                   &kp W              &kp E                 &kp R                     &kp T          &kp Y      &kp U                      &kp I                  &kp O              &kp P                            &kp EQUAL
-&kp ESC      &home_row LEFT_SHIFT A  &home_row LCTRL S  &home_row LEFT_ALT D  &home_row LEFT_COMMAND F  &kp G          &kp H      &home_row RIGHT_COMMAND J  &home_row RIGHT_ALT K  &home_row RCTRL L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
-&copy_paste  &lt 1 Z                 &lt 5 X            &kp C                 &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp RIGHT_COMMAND
+&kp ESC      &home_row LEFT_SHIFT A  &home_row LEFT_GUI S  &home_row LEFT_ALT D  &home_row LEFT_CONTROL F  &kp G          &kp H      &home_row RIGHT_CONTROL J  &home_row RIGHT_ALT K  &home_row RIGHT_GUI L  &home_row RIGHT_SHIFT SEMICOLON  &kp SQT
+&copy_paste  &lt 1 Z                 &lt 5 X            &kp C                 &kp V                     &kp B          &kp N      &kp M                      &kp COMMA              &kp DOT            &kp FSLH                         &kp RIGHT_CONTROL
                                                         &to 3                 &lt 2 BACKSPACE           &lt 7 MINUS    &kp ENTER  &kp SPACE                  &kp GRAVE
             >;
         };
@@ -356,9 +356,9 @@
         mouse_layer {
             label = "MOUSE";
             bindings = <
-&kp LS(LG(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LC(LS(TAB))  &kp LC(TAB)   &kp LG(R)    &trans          &trans            &trans          &trans           &trans  &trans
+&kp LG(LS(S))         &mkp MB4         &mkp MB5        &kp LC(LS(TAB))  &kp LC(TAB)   &kp LC(R)    &trans          &trans            &trans          &trans           &trans  &trans
 &lt 6 ESCAPE          &trans           &trans          &trans           &trans        &kp ENTER    &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans  &trans
-&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &kp LG(W)    &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT       &trans  &trans
+&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &kp LC(W)    &trans          &kp C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT       &trans  &trans
                                                        &mkp MCLK        &mkp LCLK     &mo_mkp 5 RCLK  &to 5        &to 4             &to 0
             >;
         };
@@ -366,9 +366,9 @@
         scroll_layer {
             label = "SCROLL";
             bindings = <
-&kp LG(LS(NUMBER_4))  &mkp MB4         &mkp MB5        &kp LC(LS(TAB))  &kp LC(TAB)   &kp LG(R)    &trans          &trans          &trans        &trans           &trans  &trans
+&kp LG(LS(S))         &mkp MB4         &mkp MB5        &kp LC(LS(TAB))  &kp LC(TAB)   &kp LC(R)    &trans          &trans          &trans        &trans           &trans  &trans
 &trans                &trans           &trans          &trans           &trans        &kt ENTER    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &kp LG(W)    &trans          &trans          &trans        &trans           &trans  &trans
+&trans                &msc SCRL_RIGHT  &msc SCRL_LEFT  &msc SCRL_DOWN   &msc SCRL_UP  &kp LC(W)    &trans          &trans          &trans        &trans           &trans  &trans
                                                        &mkp MCLK        &mkp LCLK     &mkp RCLK    &trans          &to 4           &to 0
             >;
         };
@@ -389,7 +389,7 @@
 &soft_off  &trans        &trans        &trans          &trans        &tog 7        &to 9       &trans                &trans                 &trans         &trans  &soft_off
 &trans     &trans        &trans        &trans          &trans        &trans        &kp DOLLAR  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp BACKSLASH  &trans  &bt BT_CLR
 &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4  &kp DOLLAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none          &trans  &trans
-                                       &trans          &kp LA(ESCAPE) &trans       &kp LS(LG(RIGHT_BRACKET))  &kp C_PP  &trans
+                                       &trans          &kp LA(ESCAPE) &trans       &kp LC(TAB)                &kp C_PP  &trans
             >;
         };
 
